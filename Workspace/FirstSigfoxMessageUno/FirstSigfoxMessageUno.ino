@@ -44,12 +44,10 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  msg[0]=0xC0;
-  msg[1]=0xFF;
-  msg[2]=0xEE;
-
+  msg[0]=0xAB;
+  msg[1]=0xCD;
+  msg[2]=255;
   sendMessage(msg, 3);
-
   // In the ETSI zone, due to the reglementation, an object cannot emit more than 1% of the time hourly
   // So, 1 hour = 3600 sec
   // 1% of 3600 sec = 36 sec
