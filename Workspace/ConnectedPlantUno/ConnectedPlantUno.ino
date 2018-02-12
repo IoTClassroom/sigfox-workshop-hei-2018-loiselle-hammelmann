@@ -44,18 +44,13 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  int light = analogRead(A0);
   int humidity = analogRead(A1);
-  Serial.print("light: ");
-  Serial.println(light);
   Serial.print("Humidity: ");
   Serial.println(humidity);
 
-  int lightPercentage = map(light, 0, 1023, 0, 100);
+  // lightPercentage =0 car pas de capteur
+  int lightPercentage = 0;
   int humidityPercentage = map(humidity, 0, 1023, 0, 100);
-  Serial.print("light percentage: ");
-  Serial.print(lightPercentage);
-  Serial.println(" % ");
   Serial.print("Humidity percentage: ");
   Serial.print(humidityPercentage);
   Serial.println(" % ");
